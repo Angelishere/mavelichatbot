@@ -4,18 +4,9 @@ from PIL import Image, ImageTk  # Import Pillow modules
 import random
 import re
 
-
-def unknown():
-    response = ["Could you please re-phrase that? ",
-                "...",
-                "Sorry! i didn't catch that.",
-                "Sorry, unclear, can you rephrase?",
-                "I'm puzzled, could you clarify?",
-                "What does that mean?"][
-        random.randrange(6)]
-    return response
-
 # Chatbot functions
+
+#checks probability
 def message_probability(user_message, recognised_words, single_response=False, required_words=[]):
     message_certainty = 0
     has_required_words = True
@@ -35,6 +26,17 @@ def message_probability(user_message, recognised_words, single_response=False, r
         return int(percentage * 100)
     else:
         return 0
+
+#responses for unknown 
+def unknown():
+    response = ["Could you please re-phrase that? ",
+                "...",
+                "Sorry! i didn't catch that.",
+                "Sorry, unclear, can you rephrase?",
+                "I'm puzzled, could you clarify?",
+                "What does that mean?"][
+        random.randrange(6)]
+    return response
 
 def check_all_messages(message):
     highest_prob_list = {}
