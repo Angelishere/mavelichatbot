@@ -143,7 +143,6 @@ def check_all_messages(message):
     response(response1, ['hello', 'hi', 'hey', 'sup', 'heyo','namaskaram','hala','maveli'], single_response=True)
     response(response2, ['bye', 'goodbye','tata','cya','later'], single_response=True)
     response(response3, ['how', 'are', 'you', 'doing'], required_words=['how'])
-    response(response3, ['enthond','vishesham'], required_words=['vishesham'])
     response(response4, ['thankyou','thanks','nanni','thank','you'], single_response=True)
     response(response5, ['you','are','nice','beautiful','generous','amazing','adipoli','awesome'], required_words=['you','are'])
     response(response6, ['can','you','give','me','advice'], required_words=['advice'])
